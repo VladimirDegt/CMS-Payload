@@ -7,8 +7,8 @@ import path from "path";
 import { fileURLToPath } from "url";
 
 import { UsersCollection } from "./collections/Users";
-import { Media } from "./collections/Media";
 import { MoviesCollection } from "./collections/Movies";
+import { Media } from "./collections/Media";
 
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
@@ -24,7 +24,7 @@ export default buildConfig({
   editor: lexicalEditor(),
 
   // Define and configure your collections in this array
-  collections: [UsersCollection, Media, MoviesCollection],
+  collections: [UsersCollection, MoviesCollection, Media],
 
   // Your Payload secret - should be a complex and secure string, unguessable
   secret: process.env.PAYLOAD_SECRET || "",

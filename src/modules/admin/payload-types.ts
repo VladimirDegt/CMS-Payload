@@ -12,8 +12,8 @@ export interface Config {
   };
   collections: {
     users: User;
-    media: Media;
     movies: Movie;
+    media: Media;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
     'payload-migrations': PayloadMigration;
@@ -21,8 +21,8 @@ export interface Config {
   collectionsJoins: {};
   collectionsSelect: {
     users: UsersSelect<false> | UsersSelect<true>;
-    media: MediaSelect<false> | MediaSelect<true>;
     movies: MoviesSelect<false> | MoviesSelect<true>;
+    media: MediaSelect<false> | MediaSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
     'payload-migrations': PayloadMigrationsSelect<false> | PayloadMigrationsSelect<true>;
@@ -78,6 +78,17 @@ export interface User {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "movies".
+ */
+export interface Movie {
+  id: string;
+  name: string;
+  poster: string | Media;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "media".
  */
 export interface Media {
@@ -97,17 +108,6 @@ export interface Media {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "movies".
- */
-export interface Movie {
-  id: string;
-  name: string;
-  poster: string | Media;
-  updatedAt: string;
-  createdAt: string;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-locked-documents".
  */
 export interface PayloadLockedDocument {
@@ -118,12 +118,12 @@ export interface PayloadLockedDocument {
         value: string | User;
       } | null)
     | ({
-        relationTo: 'media';
-        value: string | Media;
-      } | null)
-    | ({
         relationTo: 'movies';
         value: string | Movie;
+      } | null)
+    | ({
+        relationTo: 'media';
+        value: string | Media;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -184,6 +184,16 @@ export interface UsersSelect<T extends boolean = true> {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "movies_select".
+ */
+export interface MoviesSelect<T extends boolean = true> {
+  name?: T;
+  poster?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "media_select".
  */
 export interface MediaSelect<T extends boolean = true> {
@@ -199,16 +209,6 @@ export interface MediaSelect<T extends boolean = true> {
   height?: T;
   focalX?: T;
   focalY?: T;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "movies_select".
- */
-export interface MoviesSelect<T extends boolean = true> {
-  name?: T;
-  poster?: T;
-  updatedAt?: T;
-  createdAt?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
