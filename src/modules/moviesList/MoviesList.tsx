@@ -21,7 +21,7 @@ export type MoviesListProps = {
 
 export const MoviesList = ({ movies }: { movies: MoviesListProps }) => {
     const { docs } = movies;
-console.log(docs);
+
   return (
     <>
       <h1 className={cls.title}>Popular movies</h1>
