@@ -19,7 +19,6 @@ export type HomePageProps = {
 
 export const HomePage = (props: HomePageProps) => {
     const { layout } = props;
-    console.log(layout);
     return (
         <>
         <header className={cls.header}>
