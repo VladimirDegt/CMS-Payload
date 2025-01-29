@@ -1,0 +1,47 @@
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 24px 0;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px
+}
+
+.card {
+    width: 240px;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 10px 11px 13px 0px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s;
+    background-color: #ffffff;
+    margin-bottom: 24px;
+}
+
+.name {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.poster {
+  width: 100%;
+  margin-bottom: 8px;
+  object-fit: cover;
+}
+
+.tag {
+    padding: 4px;
+    border-radius: 4px;
+    background-color: #f0f0f0;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 8px;
+  margin-right: 4px;
+  text-align: center;
+}
