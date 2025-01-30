@@ -7,7 +7,7 @@ export const HomePageServer = async () => {
   const payload = await getPayload({ config });
   const homePage = await payload.findByID({
     collection: "pages" as CollectionSlug,
-    id: "679a31f152a8976ac38af062",
+    id: "679b3d894406c0c90f1a4740",
   });
 
   // @ts-expect-error TODO: fix this
