@@ -26,13 +26,29 @@ The home page is rendered using the `HomePageServer` component, which fetches da
    git clone https://github.com/VladimirDegt/CMS-Payload.git
     ```
 2. Install the dependencies:
-```sh
+   ```sh
    npm install
    ```
-3. Run the development server:
+3. Create a `.env` file in the root directory and add the following environment variables:
+   ```sh
+   PAYLOAD_SECRET=
+   
+   # MongoDB
+   DATABASE_URI=
+
+   # Uploadthing
+   UPLOADTHING_TOKEN=
+
+   # Brevo
+   BREVO_API_KEY=
+   BREVO_EMAILS_ACTIVE=
+   BREVO_SENDER_NAME=
+   BREVO_SENDER_EMAIL=
+   ```
+4. Run the development server:
    ```sh
     npm run dev
     ```
-4. Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
+5. Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
 
-5. Open [http://localhost:3000/admin](http://localhost:3000/admin) in your browser to access the Payload CMS admin panel.
+6. Open [http://localhost:3000/admin](http://localhost:3000/admin) in your browser to access the Payload CMS admin panel.
