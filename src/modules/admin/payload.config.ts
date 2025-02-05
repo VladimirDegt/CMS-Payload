@@ -13,6 +13,7 @@ import { Media } from "./collections/Media";
 import { TagsCollection } from "./collections/Tags";
 import { PagesCollection } from "./collections/Pages";
 import brevoAdapter from "@/modules/admin/utils/brevoAdapter";
+import { CustomersCollection } from "@/modules/admin/collections/Customers";
 
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
@@ -32,6 +33,7 @@ export default buildConfig({
     Media,
     TagsCollection,
     PagesCollection,
+    CustomersCollection
   ],
   secret: process.env.PAYLOAD_SECRET || "",
   typescript: {
