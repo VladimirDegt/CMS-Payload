@@ -12,8 +12,9 @@ import { MoviesCollection } from "./collections/Movies";
 import { Media } from "./collections/Media";
 import { TagsCollection } from "./collections/Tags";
 import { PagesCollection } from "./collections/Pages";
-import brevoAdapter from "@/modules/admin/utils/brevoAdapter";
 import { CustomersCollection } from "@/modules/admin/collections/Customers";
+
+import brevoAdapter from "@/modules/admin/utils/brevoAdapter";
 
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
