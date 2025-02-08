@@ -6,44 +6,49 @@ import { cookies } from "next/headers";
 
 import { Customer } from "@/modules/admin/payload-types";
 
-interface LoginParams {
+interface SignupParams {
   email: string;
   password: string;
 }
 
-export interface LoginResponse {
+export interface SignupResponse {
   success: boolean;
   error?: string;
 }
 
-export type LoginResult = {
+export type SignupResult = {
   user?: Customer;
   exp?: number;
   token?: string;
 }
 
-export async function login({ email, password }: LoginParams): Promise<LoginResponse> {
+export async function signup({ email, password }: SignupParams): Promise<SignupResponse> {
   const payload = await getPayload({ config });
   try {
-    const result: LoginResult = await payload.login({
+    await payload.create({
       collection: "customers" as CollectionSlug,
-      data: { email, password }
+      data: { email, password },
     });
 
+    const result: SignupResult = await payload.login({
+      collection: "customers" as CollectionSlug,
+      data: { email, password },
+    })
     if(result.token) {
       const cookieStore = await cookies();
-      cookieStore.set("payload-token", result.token, {
+      cookieStore.set({
+        name: "payload-token",
+        value: result.token,
         httpOnly: true,
         secure: process.env.NODE_ENV === "production",
-        path: "/"
-      })
-
+        path: "/",
+      });
       return { success: true };
     } else {
-      return { success: false, error: "An error occurred" };
+      return { success: false, error: "Login failed" };
     }
   } catch (error) {
-    console.error("Login error", error);
-    return { success: false, error: "An error occurred" };
+    console.error("Signup error", error);
+    return { success: false, error: "Signup failed" };
   }
 }
