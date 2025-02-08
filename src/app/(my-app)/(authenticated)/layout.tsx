@@ -1,6 +1,6 @@
 import { redirect } from "next/navigation";
 import { FC, ReactNode } from "react";
-import { getUser } from "@/app/(my-app)/(authenticated)/actions/getUser";
+import { getUser } from "@/app/(my-app)/(authenticated)/_actions/getUser";
 
 interface LayoutProps {
   children: ReactNode;

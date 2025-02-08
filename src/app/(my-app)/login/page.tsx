@@ -1,5 +1,5 @@
 import { ReactElement } from "react";
-import LoginForm from "@/app/(my-app)/login/components/LoginForm";
+import LoginForm from "@/app/(my-app)/login/_components/LoginForm";
 
 import cls from "./page.module.scss";
 

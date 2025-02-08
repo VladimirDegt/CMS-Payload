@@ -5,21 +5,22 @@ import { ReactElement, useState } from "react";
 import { Button, Form, Input, Space } from "antd";
 import type { FormProps } from "antd";
 import { Typography } from "antd";
-import { login, LoginResponse } from "@/app/(my-app)/login/actions/login";
 import Link from "next/link";
+import { signup, SignupResponse } from "@/app/(my-app)/signup/_actions/signup";
 
 type FieldType = {
   email?: string;
   password?: string;
+  confirm?: string;
 };
 
-export default function LoginForm(): ReactElement {
+export default function SignupForm(): ReactElement {
   const [isPending, setIsPending] = useState(false);
   const router = useRouter();
 
   const onFinish: FormProps<FieldType>["onFinish"] = async (values) => {
     setIsPending(true);
-    const result: LoginResponse = await login({
+    const result: SignupResponse = await signup({
       email: values.email as string,
       password: values.password as string
     });
@@ -59,7 +60,7 @@ export default function LoginForm(): ReactElement {
         level={3}
         style={{ textAlign: "center", marginBottom: "24px" }}
       >
-        Login
+        Signup
       </Typography.Title>
       <Form.Item<FieldType>
         label="Email"
@@ -79,6 +80,29 @@ export default function LoginForm(): ReactElement {
         <Input.Password style={{ width: "100%" }} />
       </Form.Item>
 
+      <Form.Item<FieldType>
+        name="confirm"
+        label="Confirm Password"
+        dependencies={['password']}
+        hasFeedback
+        rules={[
+          {
+            required: true,
+            message: 'Please confirm your password!',
+          },
+          ({ getFieldValue }) => ({
+            validator(_, value) {
+              if (!value || getFieldValue('password') === value) {
+                return Promise.resolve();
+              }
+              return Promise.reject(new Error('The new password that you entered do not match!'));
+            },
+          }),
+        ]}
+      >
+        <Input.Password />
+      </Form.Item>
+
       <Form.Item label={null} style={{ width: "100%" }}>
         {isPending ? (
           <Button type="primary" loading>
@@ -92,9 +116,9 @@ export default function LoginForm(): ReactElement {
       </Form.Item>
       <Space style={{ display: "flex", justifyContent: "center", marginTop: "16px", gap: "8px" }}>
         <Typography.Text>
-          Do you have an account?
+          Already have an account?
         </Typography.Text>
-        <Link href="/signup">Sign Up</Link>
+        <Link href="/login">Login</Link>
       </Space>
 
     </Form>
