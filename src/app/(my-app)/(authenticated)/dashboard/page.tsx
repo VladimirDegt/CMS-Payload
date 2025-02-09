@@ -1,7 +1,7 @@
+import { Dashboard } from "@/app/(my-app)/(authenticated)/dashboard/components/Dashboard";
+
 export default function page(){
   return (
-    <div>
-      <h1>Dashboard</h1>
-    </div>
+    <Dashboard/>
   );
 }
