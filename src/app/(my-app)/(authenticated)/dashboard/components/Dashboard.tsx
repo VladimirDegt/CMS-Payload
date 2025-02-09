@@ -8,6 +8,7 @@ import { LogoutBtn } from "./LogoutBtn";
 const { Header, Content, Footer } = Layout;
 
 export const Dashboard = () => {
+    
   return (
     <Layout>
       <Header style={{ display: "flex", alignItems: "center" }}>
@@ -23,7 +24,7 @@ export const Dashboard = () => {
             borderRadius: 4,
           }}
         >
-          Content
+        Content 
         </div>
       </Content>
       <Footer style={{ textAlign: "center" }}>

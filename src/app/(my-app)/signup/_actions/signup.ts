@@ -30,10 +30,11 @@ export async function signup({ email, password }: SignupParams): Promise<SignupR
       data: { email, password },
     });
 
-    const result: SignupResult = await payload.login({
+    const result: SignupResult = (await payload.login({
       collection: "customers" as CollectionSlug,
       data: { email, password },
-    })
+    })) as SignupResult;
+      
     if(result.token) {
       const cookieStore = await cookies();
       cookieStore.set({

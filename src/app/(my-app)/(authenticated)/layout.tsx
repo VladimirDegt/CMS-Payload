@@ -7,11 +7,13 @@ interface LayoutProps {
 }
 
 const Layout: FC<LayoutProps> = async ({ children }: LayoutProps) => {
-  const user = await getUser();
-
+    const user = await getUser();
+   
   if (!user) redirect("/login");
 
-  return <>{children}</>;
+    return <>
+        {children}
+    </>;
 }
 
 export default Layout;

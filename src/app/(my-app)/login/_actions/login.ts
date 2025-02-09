@@ -20,15 +20,15 @@ export type LoginResult = {
   user?: Customer;
   exp?: number;
   token?: string;
-}
+};
 
 export async function login({ email, password }: LoginParams): Promise<LoginResponse> {
   const payload = await getPayload({ config });
   try {
-    const result: LoginResult = await payload.login({
+    const result: LoginResult = (await payload.login({
       collection: "customers" as CollectionSlug,
-      data: { email, password }
-    });
+      data: { email, password },
+    })) as LoginResult;
 
     if(result.token) {
       const cookieStore = await cookies();
