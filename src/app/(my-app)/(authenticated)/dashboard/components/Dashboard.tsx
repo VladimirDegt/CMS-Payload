@@ -1,14 +1,35 @@
 "use client";
 
-import { Layout } from "antd";
+import { Layout, Button, Modal, Input, Flex } from "antd";
+import { ChangeEvent, useState } from "react";
 
 import { NavigationMenu } from "./NavigationMenu";
 import { LogoutBtn } from "./LogoutBtn";
+import { sendEmail } from "@/modules/utils/sendEmail";
 
 const { Header, Content, Footer } = Layout;
 
 export const Dashboard = () => {
-    
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [email, setEmail] = useState('');
+
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleOk = async () => {
+    await sendEmail(email);
+    setIsModalOpen(false);
+  };
+
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
+
+  const handleGetEmail = (e: ChangeEvent<HTMLInputElement>) => {
+    setEmail(e.target.value);
+  }
+
   return (
     <Layout>
       <Header style={{ display: "flex", alignItems: "center" }}>
@@ -24,7 +45,21 @@ export const Dashboard = () => {
             borderRadius: 4,
           }}
         >
-        Content 
+          <Button type="primary" onClick={showModal}>
+            Test send Email
+          </Button>
+          <Modal
+            title="Send message"
+            open={isModalOpen}
+            onOk={handleOk}
+            onCancel={handleCancel}
+          >
+            <Flex vertical={true} gap={24}>
+              <p>Test send email</p>
+              <p>Text massage is created in the CMS</p>
+              <Input placeholder="Your email" type="email" onChange={handleGetEmail} value={email}/>
+            </Flex>
+          </Modal>
         </div>
       </Content>
       <Footer style={{ textAlign: "center" }}>

@@ -5,11 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5e2bf954-954c-4db8-b6ec-2c49469a8d6c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/admin/collections/Emails.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/utils/sendEmail.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/(my-app)/(authenticated)/dashboard/components/Dashboard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(my-app)/(authenticated)/dashboard/components/Dashboard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(payload)/admin/importMap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(payload)/admin/importMap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/HomePage/HomePageServer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/HomePage/HomePageServer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/admin/payload-types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/admin/payload-types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/admin/payload.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/admin/payload.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/admin/utils/brevoAdapter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/admin/utils/brevoAdapter.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +24,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -35,6 +47,9 @@
   &quot;associatedIndex&quot;: 0
 }</component>
   <component name="ProjectId" id="2sG5KnvOUxHksC3X4O9aKh3NmsY" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="false" />
@@ -45,12 +60,12 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "com.codeium.enabled": "true",
-    "git-widget-placeholder": "feature/dashboard",
+    "git-widget-placeholder": "feature/email-in-the-component",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "prettierjs.PrettierConfiguration.Package": "C:\\Users\\Volodymyr\\main\\Projects\\my-app\\node_modules\\prettier",
-    "ts.external.directory.path": "C:\\Users\\Volodymyr\\main\\Projects\\my-app\\node_modules\\typescript\\lib"
+    "prettierjs.PrettierConfiguration.Package": "D:\\Degtyarev\\Projects\\Wanderways\\CMS-Payload\\node_modules\\prettier",
+    "ts.external.directory.path": "D:\\Degtyarev\\Projects\\Wanderways\\CMS-Payload\\node_modules\\typescript\\lib"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -61,7 +76,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-WS-243.23654.157" />
+        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-WS-243.22562.222" />
       </set>
     </attachedChunks>
   </component>

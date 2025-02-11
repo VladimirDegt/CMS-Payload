@@ -13,6 +13,7 @@ import { Media } from "./collections/Media";
 import { TagsCollection } from "./collections/Tags";
 import { PagesCollection } from "./collections/Pages";
 import { CustomersCollection } from "@/modules/admin/collections/Customers";
+import { EmailCollection } from "@/modules/admin/collections/Emails";
 
 import brevoAdapter from "@/modules/admin/utils/brevoAdapter";
 
@@ -26,7 +27,6 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
   },
-  editor: lexicalEditor(),
   email: brevoAdapter(),
   collections: [
     UsersCollection,
@@ -34,8 +34,10 @@ export default buildConfig({
     Media,
     TagsCollection,
     PagesCollection,
-    CustomersCollection
+    CustomersCollection,
+    EmailCollection
   ],
+  editor: lexicalEditor({}),
   secret: process.env.PAYLOAD_SECRET || "",
   typescript: {
     outputFile: path.resolve(dirname, "payload-types.ts"),
