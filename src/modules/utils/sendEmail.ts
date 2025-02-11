@@ -13,6 +13,7 @@ export const sendEmail = async (senderEmail: string) => {
   await payload.sendEmail({
     to: senderEmail,
     subject: "Welcome to Movie App",
+    // @ts-expect-error TODO: fix type
     html: messagesDoc.lexical_html,
   });
 };
