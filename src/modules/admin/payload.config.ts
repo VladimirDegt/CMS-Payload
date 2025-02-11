@@ -26,6 +26,14 @@ export default buildConfig({
     importMap: {
       baseDir: path.resolve(dirname),
     },
+    dateFormat: "dd/MM/yyyy",
+  },
+  cors: [process.env.URL_DEV || "", process.env.URL_PROD || ""],
+    csrf: [process.env.URL_DEV || "", process.env.URL_PROD || ""],
+    upload: {
+        limits: {
+          fileSize: 5 * 1024 * 1024
+      }
   },
   email: brevoAdapter(),
   collections: [
@@ -35,7 +43,7 @@ export default buildConfig({
     TagsCollection,
     PagesCollection,
     CustomersCollection,
-    EmailCollection
+    EmailCollection,
   ],
   editor: lexicalEditor({}),
   secret: process.env.PAYLOAD_SECRET || "",
@@ -54,7 +62,7 @@ export default buildConfig({
       },
       options: {
         token: process.env.UPLOADTHING_TOKEN,
-        acl: 'public-read',
+        acl: "public-read",
       },
     }),
   ],
