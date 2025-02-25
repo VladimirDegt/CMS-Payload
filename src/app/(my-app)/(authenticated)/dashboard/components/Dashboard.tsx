@@ -6,6 +6,7 @@ import { ChangeEvent, useState } from "react";
 import { NavigationMenu } from "./NavigationMenu";
 import { LogoutBtn } from "./LogoutBtn";
 import { sendEmail } from "@/modules/utils/sendEmail";
+import ProjectsListServer from "@/app/(my-app)/(authenticated)/dashboard/components/ProjectsListServer";
 
 const { Header, Content, Footer } = Layout;
 

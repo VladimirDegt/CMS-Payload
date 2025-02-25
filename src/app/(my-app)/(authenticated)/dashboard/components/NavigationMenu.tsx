@@ -12,6 +12,13 @@ export const NavigationMenu = () => {
         navigate.push("/");
       },
     },
+      {
+        key: "1",
+        label: "Admin",
+        onClick: () => {
+          navigate.push("/admin");
+        },
+      },
   ];
   return (
     <Menu
