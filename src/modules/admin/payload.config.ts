@@ -8,14 +8,8 @@ import { fileURLToPath } from "url";
 import { uploadthingStorage } from "@payloadcms/storage-uploadthing";
 
 import { UsersCollection } from "./collections/Users";
-import { MoviesCollection } from "./collections/Movies";
-import { Media } from "./collections/Media";
-import { TagsCollection } from "./collections/Tags";
-import { PagesCollection } from "./collections/Pages";
-import { CustomersCollection } from "@/modules/admin/collections/Customers";
-import { EmailCollection } from "@/modules/admin/collections/Emails";
-
 import brevoAdapter from "@/modules/admin/utils/brevoAdapter";
+import { collections } from "@/modules/admin/collections";
 
 const filename = fileURLToPath(import.meta.url);
 const dirname = path.dirname(filename);
@@ -27,24 +21,22 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
     dateFormat: "dd/MM/yyyy",
+    // components: {
+    //   beforeDashboard: [{path: 'src/moules/admin/adminComponents/HelloWidget.tsx'}],
+    // },
+    // components: {
+    //   beforeDashboard: ['D:/Degtyarev/Projects/Wanderways/CMS-Payload/src/modules/admin/adminComponents/HelloWidget.tsx']
+    // }
   },
   cors: [process.env.URL_DEV || "", process.env.URL_PROD || ""],
-    csrf: [process.env.URL_DEV || "", process.env.URL_PROD || ""],
-    upload: {
-        limits: {
-          fileSize: 5 * 1024 * 1024
-      }
+  csrf: [process.env.URL_DEV || "", process.env.URL_PROD || ""],
+  upload: {
+    limits: {
+      fileSize: 5 * 1024 * 1024,
+    },
   },
   email: brevoAdapter(),
-  collections: [
-    UsersCollection,
-    MoviesCollection,
-    Media,
-    TagsCollection,
-    PagesCollection,
-    CustomersCollection,
-    EmailCollection,
-  ],
+  collections,
   editor: lexicalEditor({}),
   secret: process.env.PAYLOAD_SECRET || "",
   typescript: {

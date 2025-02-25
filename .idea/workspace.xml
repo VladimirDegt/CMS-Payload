@@ -5,23 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5e2bf954-954c-4db8-b6ec-2c49469a8d6c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/modules/admin/collections/Emails.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/utils/sendEmail.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" afterPath="$PROJECT_DIR$/.env.example" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(my-app)/(authenticated)/dashboard/components/ProjectListClient.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/(my-app)/(authenticated)/dashboard/components/ProjectsListServer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/admin/adminComponents/HelloWidget.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/admin/adminComponents/style.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/admin/collections/Projects.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/admin/collections/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/(my-app)/(authenticated)/dashboard/components/Dashboard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(my-app)/(authenticated)/dashboard/components/Dashboard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(payload)/admin/importMap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(payload)/admin/importMap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/HomePage/HomePageServer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/HomePage/HomePageServer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(my-app)/(authenticated)/dashboard/components/NavigationMenu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(my-app)/(authenticated)/dashboard/components/NavigationMenu.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(my-app)/(authenticated)/dashboard/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(my-app)/(authenticated)/dashboard/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/admin/payload-types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/admin/payload-types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/modules/admin/payload.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/admin/payload.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/admin/utils/brevoAdapter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/admin/utils/brevoAdapter.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="React Component + SCSS.tsx.child.0" />
+        <option value="React Component + SCSS" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -55,28 +63,31 @@
     <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "com.codeium.enabled": "true",
-    "git-widget-placeholder": "feature/email-in-the-component",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "prettierjs.PrettierConfiguration.Package": "D:\\Degtyarev\\Projects\\Wanderways\\CMS-Payload\\node_modules\\prettier",
-    "ts.external.directory.path": "D:\\Degtyarev\\Projects\\Wanderways\\CMS-Payload\\node_modules\\typescript\\lib"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;com.codeium.enabled&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/create-custom-admin-component&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;D:\\Degtyarev\\Projects\\Wanderways\\CMS-Payload\\node_modules\\prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\Degtyarev\\Projects\\Wanderways\\CMS-Payload\\node_modules\\typescript\\lib&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Degtyarev\Projects\Wanderways\CMS-Payload\src\modules\admin\adminComponents" />
+      <recent name="D:\Degtyarev\Projects\Wanderways\CMS-Payload\src\modules\admin" />
       <recent name="C:\Users\Volodymyr\main\Projects\my-app" />
     </key>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-deb605915726-JavaScript-WS-243.22562.222" />
+        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-WS-243.23654.157" />
       </set>
     </attachedChunks>
   </component>

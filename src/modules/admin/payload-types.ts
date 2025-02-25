@@ -19,6 +19,7 @@ export interface Config {
     pages: Page;
     customers: Customer;
     emails: Email;
+    projects: Project;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
     'payload-migrations': PayloadMigration;
@@ -32,6 +33,7 @@ export interface Config {
     pages: PagesSelect<false> | PagesSelect<true>;
     customers: CustomersSelect<false> | CustomersSelect<true>;
     emails: EmailsSelect<false> | EmailsSelect<true>;
+    projects: ProjectsSelect<false> | ProjectsSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
     'payload-migrations': PayloadMigrationsSelect<false> | PayloadMigrationsSelect<true>;
@@ -226,6 +228,48 @@ export interface Email {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "projects".
+ */
+export interface Project {
+  id: string;
+  title: string;
+  startProject: {
+    startDate: string;
+    startTime: string;
+  };
+  endProject: {
+    endDate: string;
+    endTime: string;
+  };
+  requirements: 'Альфа' | 'Бета' | 'Гамма';
+  type:
+    | 'Дослідницький'
+    | 'Дослидницький на конкретних пристроях'
+    | 'З тест кейсами без пристроїв'
+    | 'З тест кейсами та з пристроями';
+  slots?: ('10' | '20' | '30' | '40' | '50') | null;
+  effort?: string | null;
+  focus?: {
+    root: {
+      type: string;
+      children: {
+        type: string;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
+  focus_html?: string | null;
+  updatedAt: string;
+  createdAt: string;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "payload-locked-documents".
  */
 export interface PayloadLockedDocument {
@@ -258,6 +302,10 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'emails';
         value: string | Email;
+      } | null)
+    | ({
+        relationTo: 'projects';
+        value: string | Project;
       } | null);
   globalSlug?: string | null;
   user:
@@ -422,6 +470,33 @@ export interface CustomersSelect<T extends boolean = true> {
 export interface EmailsSelect<T extends boolean = true> {
   message?: T;
   lexical_html?: T;
+  updatedAt?: T;
+  createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "projects_select".
+ */
+export interface ProjectsSelect<T extends boolean = true> {
+  title?: T;
+  startProject?:
+    | T
+    | {
+        startDate?: T;
+        startTime?: T;
+      };
+  endProject?:
+    | T
+    | {
+        endDate?: T;
+        endTime?: T;
+      };
+  requirements?: T;
+  type?: T;
+  slots?: T;
+  effort?: T;
+  focus?: T;
+  focus_html?: T;
   updatedAt?: T;
   createdAt?: T;
 }
