@@ -11,7 +11,7 @@ const ProjectsListServer = async () => {
   const projects = await payload.find({
     collection: "projects" as CollectionSlug,
   });
-
+  // @ts-expect-error TODO: fix this type
   return <ProjectListClient projects={projects.docs} />;
 };
 

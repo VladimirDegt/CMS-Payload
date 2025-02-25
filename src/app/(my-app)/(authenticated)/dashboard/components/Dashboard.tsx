@@ -1,16 +1,15 @@
 "use client";
 
 import { Layout, Button, Modal, Input, Flex } from "antd";
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, ReactElement, useState } from "react";
 
 import { NavigationMenu } from "./NavigationMenu";
 import { LogoutBtn } from "./LogoutBtn";
 import { sendEmail } from "@/modules/utils/sendEmail";
-import ProjectsListServer from "@/app/(my-app)/(authenticated)/dashboard/components/ProjectsListServer";
 
 const { Header, Content, Footer } = Layout;
 
-export const Dashboard = () => {
+export const Dashboard = ({children}: {children: ReactElement}) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [email, setEmail] = useState('');
 
@@ -49,6 +48,7 @@ export const Dashboard = () => {
           <Button type="primary" onClick={showModal}>
             Test send Email
           </Button>
+          {children}
           <Modal
             title="Send message"
             open={isModalOpen}

@@ -24,7 +24,7 @@ const ProjectListClient = ({ projects }: Props) => {
 
   return (
     <div style={{ padding: "16px" }}>
-      <Title level={4}>Our Projects</Title>
+      <Title level={2} style={{ textAlign: "center" }}>Our Projects</Title>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "16px" }}>
         {projects.map((project) => (
           <Card
