@@ -4,6 +4,12 @@ import { Card, Typography, Divider } from "antd";
 
 const { Title, Text } = Typography;
 
+type AdditionalSections = {
+  specialInstructions_html: string;
+  bugInstructions_html: string;
+  bonuses_html: string;
+}
+
 type Project = {
   id: string;
   title: string;
@@ -14,6 +20,11 @@ type Project = {
   slots: string;
   effort: string;
   focus_html: string;
+  testEnvironment_html: string;
+  specialInstructions_html: string;
+  bugInstructions_html: string;
+  bonuses_html: string;
+  additionalSections: AdditionalSections;
 };
 
 type Props = {
@@ -24,15 +35,15 @@ const ProjectListClient = ({ projects }: Props) => {
 
   return (
     <div style={{ padding: "16px" }}>
-      <Title level={2} style={{ textAlign: "center" }}>Our Projects</Title>
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "16px" }}>
+      <Title level={2} style={{ textAlign: "center" }}>Our projects</Title>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "16px" }}>
         {projects.map((project) => (
           <Card
             key={project.id}
             title={project.title}
             bordered={true}
-            style={{ width: "100%" }}
-            headStyle={{ background: "#f5f5f5" }}
+            style={{ maxWidth: "300px" }}
+            headStyle={{ background: "#D5EFE4" }}
           >
             <Text strong>Початок: </Text>
             <Text>
@@ -68,6 +79,31 @@ const ProjectListClient = ({ projects }: Props) => {
             <div
               dangerouslySetInnerHTML={{ __html: project.focus_html || "" }}
             />
+            <Divider style={{ margin: "8px 0" }} />
+
+            <Text strong>Тестове середовище: </Text>
+            <div
+              dangerouslySetInnerHTML={{ __html: project.testEnvironment_html || "" }}
+            />
+            <Divider style={{ margin: "8px 0" }} />
+
+            <Text strong>Спеціальні інструкції: </Text>
+            <div
+              dangerouslySetInnerHTML={{ __html: project.additionalSections.specialInstructions_html || "" }}
+            />
+            <Divider style={{ margin: "8px 0" }} />
+
+            <Text strong>Інструкції баг-репортингу: </Text>
+            <div
+              dangerouslySetInnerHTML={{ __html: project.additionalSections.bugInstructions_html || "" }}
+            />
+            <Divider style={{ margin: "8px 0" }} />
+
+            <Text strong>Бонуси: </Text>
+            <div
+              dangerouslySetInnerHTML={{ __html: project.additionalSections.bonuses_html || "" }}
+            />
+            <Divider style={{ margin: "8px 0" }} />
           </Card>
         ))}
       </div>

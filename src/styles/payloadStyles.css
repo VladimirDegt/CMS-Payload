@@ -1,0 +1,45 @@
+@layer theme, base, utilities, components;
+@import 'tailwindcss/theme.css' layer(theme);
+/*@import 'tailwindcss/base.css' layer(base);*/
+/*@import 'tailwindcss/components.css' layer(components);*/
+@import 'tailwindcss/utilities.css' layer(utilities);
+
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+
+:root {
+    /* Variables */
+    --theme-elevation-100: #EEF1F8;
+    --theme-elevation-200: #97ADD4;
+    /*--theme-elevation-800: #30A07;*/
+    --font-body: 'Suisse Intl', system-ui;
+    --font-mono: monospace;
+    --font-serif: 'Merriweather', serif;
+    --style-radius-s: 4px;
+    --style-radius-m: 8px;
+    --style-radius-l: 16px;
+    --nav-width: 275px;
+}
+
+/* Dashboard Card Labels */
+.dashboard__label {
+    fontFamily: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+/* Dashboard Card */
+.card {
+    background-color: var(--theme-elevation-100);
+    border: 1px solid var(--theme-elevation-200);
+}
+
+/* Dashboard Card Title */
+.card__title {
+    fontFamily: Impact;
+}
+
+/* Dashboard Card Action Button (empty) */
+.card__actions {}
+
+/* Input Field */
+.field-type.text:not(.has-many) input {
+    border: 1px solid var(--theme-elevation-200);
+}
