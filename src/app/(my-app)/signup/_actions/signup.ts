@@ -4,7 +4,7 @@ import { CollectionSlug, getPayload } from "payload";
 import config from "@payload-config";
 import { cookies } from "next/headers";
 
-import { Customer } from "@/modules/admin/payload-types";
+import { Customer } from "@/payload-types";
 
 interface SignupParams {
   email: string;

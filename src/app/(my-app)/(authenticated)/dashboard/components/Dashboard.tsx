@@ -31,7 +31,7 @@ export const Dashboard = ({children}: {children: ReactElement}) => {
   }
 
   return (
-    <Layout>
+    <Layout style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
       <Header style={{ display: "flex", alignItems: "center" }}>
         <NavigationMenu />
         <LogoutBtn />

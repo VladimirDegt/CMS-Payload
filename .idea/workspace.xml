@@ -5,18 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5e2bf954-954c-4db8-b6ec-2c49469a8d6c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/(my-app)/(authenticated)/dashboard/components/ProjectListClient.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/(my-app)/(authenticated)/dashboard/components/ProjectsListServer.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/admin/adminComponents/HelloWidget.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/admin/adminComponents/style.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/admin/collections/Projects.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/modules/admin/collections/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/postcss.config.mjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/ava.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/logo-shadow.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/logo_circle.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/admin/adminComponents/Icon.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/modules/admin/adminComponents/Logo.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/globals.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles/payloadStyles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payload-types.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(my-app)/(authenticated)/_actions/getUser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(my-app)/(authenticated)/_actions/getUser.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/(my-app)/(authenticated)/dashboard/components/Dashboard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(my-app)/(authenticated)/dashboard/components/Dashboard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(my-app)/(authenticated)/dashboard/components/NavigationMenu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(my-app)/(authenticated)/dashboard/components/NavigationMenu.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/(my-app)/(authenticated)/dashboard/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(my-app)/(authenticated)/dashboard/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/admin/payload-types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/admin/payload-types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/modules/admin/payload.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/admin/payload.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(my-app)/(authenticated)/dashboard/components/ProjectListClient.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(my-app)/(authenticated)/dashboard/components/ProjectListClient.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(my-app)/login/_actions/login.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(my-app)/login/_actions/login.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(my-app)/signup/_actions/signup.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(my-app)/signup/_actions/signup.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(payload)/admin/importMap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(payload)/admin/importMap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/(payload)/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/(payload)/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/admin/adminComponents/HelloWidget.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/admin/adminComponents/HelloWidget.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/admin/adminComponents/style.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/admin/adminComponents/style.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/admin/collections/Movies.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/admin/collections/Movies.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/admin/collections/Projects.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/modules/admin/collections/Projects.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/admin/payload-types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/payload-types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/modules/admin/payload.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/payload.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,23 +78,29 @@
     <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;com.codeium.enabled&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/create-custom-admin-component&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;D:\\Degtyarev\\Projects\\Wanderways\\CMS-Payload\\node_modules\\prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;D:\\Degtyarev\\Projects\\Wanderways\\CMS-Payload\\node_modules\\typescript\\lib&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "com.codeium.enabled": "true",
+    "git-widget-placeholder": "feature/tailwind",
+    "last_opened_file_path": "D:/Degtyarev/Projects/Wanderways/CMS-Payload/src/modules/admin/adminComponents",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "prettierjs.PrettierConfiguration.Package": "D:\\Degtyarev\\Projects\\Wanderways\\CMS-Payload\\node_modules\\prettier",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "D:\\Degtyarev\\Projects\\Wanderways\\CMS-Payload\\node_modules\\typescript\\lib"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Degtyarev\Projects\Wanderways\CMS-Payload\src\modules\admin\adminComponents" />
+      <recent name="D:\Degtyarev\Projects\Wanderways\CMS-Payload\src\assets" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Degtyarev\Projects\Wanderways\CMS-Payload\src\modules\admin\adminComponents" />
+      <recent name="D:\Degtyarev\Projects\Wanderways\CMS-Payload\src" />
       <recent name="D:\Degtyarev\Projects\Wanderways\CMS-Payload\src\modules\admin" />
       <recent name="C:\Users\Volodymyr\main\Projects\my-app" />
     </key>

@@ -2,7 +2,7 @@ import { headers as getHeaders } from "next/headers";
 import { getPayload } from "payload";
 import type { Payload } from "payload";
 import configPromise from "@payload-config";
-import { Customer } from "@/modules/admin/payload-types";
+import { Customer } from "@/payload-types";
 
 
 export async function getUser(): Promise<Customer|null> {

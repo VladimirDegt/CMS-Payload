@@ -12,7 +12,6 @@ export const MoviesCollection: CollectionConfig = {
       fields: [
         {
           type: "relationship",
-          // @ts-expect-error TODO: fix this
           relationTo: ["tags"],
           name: "name",
           required: true,

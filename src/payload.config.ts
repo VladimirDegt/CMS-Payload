@@ -7,7 +7,7 @@ import path from "path";
 import { fileURLToPath } from "url";
 import { uploadthingStorage } from "@payloadcms/storage-uploadthing";
 
-import { UsersCollection } from "./collections/Users";
+import { UsersCollection } from "./modules/admin/collections/Users";
 import brevoAdapter from "@/modules/admin/utils/brevoAdapter";
 import { collections } from "@/modules/admin/collections";
 
@@ -21,6 +21,13 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
     dateFormat: "dd/MM/yyyy",
+    components: {
+      graphics: {
+        Logo: '@/modules/admin/adminComponents/Logo',
+        Icon: '@/modules/admin/adminComponents/Icon'
+      },
+      beforeDashboard: ['@/modules/admin/adminComponents/HelloWidget']
+    },
     // components: {
     //   beforeDashboard: [{path: 'src/moules/admin/adminComponents/HelloWidget.tsx'}],
     // },

@@ -264,7 +264,73 @@ export interface Project {
     };
     [k: string]: unknown;
   } | null;
+  testEnvironment?: {
+    root: {
+      type: string;
+      children: {
+        type: string;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  } | null;
   focus_html?: string | null;
+  testEnvironment_html?: string | null;
+  additionalSections?: {
+    specialInstructions?: {
+      root: {
+        type: string;
+        children: {
+          type: string;
+          version: number;
+          [k: string]: unknown;
+        }[];
+        direction: ('ltr' | 'rtl') | null;
+        format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+        indent: number;
+        version: number;
+      };
+      [k: string]: unknown;
+    } | null;
+    bugInstructions?: {
+      root: {
+        type: string;
+        children: {
+          type: string;
+          version: number;
+          [k: string]: unknown;
+        }[];
+        direction: ('ltr' | 'rtl') | null;
+        format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+        indent: number;
+        version: number;
+      };
+      [k: string]: unknown;
+    } | null;
+    bonuses?: {
+      root: {
+        type: string;
+        children: {
+          type: string;
+          version: number;
+          [k: string]: unknown;
+        }[];
+        direction: ('ltr' | 'rtl') | null;
+        format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+        indent: number;
+        version: number;
+      };
+      [k: string]: unknown;
+    } | null;
+    specialInstructions_html?: string | null;
+    bugInstructions_html?: string | null;
+    bonuses_html?: string | null;
+  };
   updatedAt: string;
   createdAt: string;
 }
@@ -496,7 +562,19 @@ export interface ProjectsSelect<T extends boolean = true> {
   slots?: T;
   effort?: T;
   focus?: T;
+  testEnvironment?: T;
   focus_html?: T;
+  testEnvironment_html?: T;
+  additionalSections?:
+    | T
+    | {
+        specialInstructions?: T;
+        bugInstructions?: T;
+        bonuses?: T;
+        specialInstructions_html?: T;
+        bugInstructions_html?: T;
+        bonuses_html?: T;
+      };
   updatedAt?: T;
   createdAt?: T;
 }
