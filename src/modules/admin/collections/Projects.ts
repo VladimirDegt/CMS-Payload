@@ -5,6 +5,8 @@ import {
   lexicalEditor,
   lexicalHTML,
 } from "@payloadcms/richtext-lexical";
+import { beforeOperationHook } from "@/modules/admin/hooks/collectionsHooks/beforeOperationHook";
+
 
 export const ProjectsCollection: CollectionConfig = {
   slug: "projects",
@@ -17,6 +19,9 @@ export const ProjectsCollection: CollectionConfig = {
   admin: {
     useAsTitle: "title",
   },
+  hooks: {
+    beforeOperation: [beforeOperationHook],
+  },
   fields: [
     {
       name: "title",
@@ -24,7 +29,7 @@ export const ProjectsCollection: CollectionConfig = {
       label: "Назва",
       required: true,
       admin: {
-        placeholder: "Введіть назву проєкта",
+        placeholder: "Введіть назву проєкта"
       },
     },
     {

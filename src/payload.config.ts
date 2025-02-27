@@ -2,7 +2,8 @@ import sharp from "sharp";
 import { lexicalEditor } from "@payloadcms/richtext-lexical";
 import { mongooseAdapter } from "@payloadcms/db-mongodb";
 import { payloadCloudPlugin } from "@payloadcms/payload-cloud";
-import { buildConfig } from "payload";
+import { seoPlugin} from "@payloadcms/plugin-seo";
+import { AfterErrorHookArgs, buildConfig } from "payload";
 import path from "path";
 import { fileURLToPath } from "url";
 import { uploadthingStorage } from "@payloadcms/storage-uploadthing";
@@ -28,12 +29,6 @@ export default buildConfig({
       },
       beforeDashboard: ['@/modules/admin/adminComponents/HelloWidget']
     },
-    // components: {
-    //   beforeDashboard: [{path: 'src/moules/admin/adminComponents/HelloWidget.tsx'}],
-    // },
-    // components: {
-    //   beforeDashboard: ['D:/Degtyarev/Projects/Wanderways/CMS-Payload/src/modules/admin/adminComponents/HelloWidget.tsx']
-    // }
   },
   cors: [process.env.URL_DEV || "", process.env.URL_PROD || ""],
   csrf: [process.env.URL_DEV || "", process.env.URL_PROD || ""],
@@ -55,6 +50,14 @@ export default buildConfig({
   sharp,
   plugins: [
     payloadCloudPlugin(),
+    seoPlugin({
+      collections: ["projects", "movies"],
+      uploadsCollection: "media",
+      generateTitle: (doc) => doc.title,
+      // generateDescription: (doc) => doc.description,
+      generateURL: ({doc, collectionSlug}) => `http://example.com/${collectionSlug}/${doc.slug}`,
+      tabbedUI: true
+    }),
     uploadthingStorage({
       collections: {
         media: true,
@@ -65,4 +68,11 @@ export default buildConfig({
       },
     }),
   ],
+  hooks: {
+    afterError: [
+      (error: AfterErrorHookArgs)=> {
+        console.error('Error in the global hook:', error.error);
+      },
+    ]
+  }
 });
